@@ -606,7 +606,7 @@ const Write = () => {
           >
             <h2 className="pageTitle">{t('writeDocument')}</h2>
             <Space>
-              <Button.Group>
+              <Space.Compact>
                 <Button
                   type={viewMode === 'edit' ? 'primary' : 'default'}
                   onClick={() => setViewMode('edit')}
@@ -625,14 +625,14 @@ const Write = () => {
                 >
                   {t('preview')}
                 </Button>
-              </Button.Group>
+              </Space.Compact>
               <Button type="primary" onClick={handleSave}>
                 {t('save')}
               </Button>
             </Space>
           </Flex>
           <Card
-            bodyStyle={{
+            style={{
               padding: 0,
               height: 'calc(70vh - 100px)',
               overflow: 'hidden',
@@ -643,7 +643,7 @@ const Write = () => {
           </Card>
           <Card
             title={t('aiAssistant')}
-            bodyStyle={{
+            style={{
               padding: 10,
               height: 'auto',
               display: 'flex',
